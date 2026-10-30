@@ -28,7 +28,8 @@ Copy-paste prompts for every step: **[PROMPTS.md](PROMPTS.md)**. Use **claude.ai
 5. **Deliver:** fix what the review found, push, then merge to `main`.
 
 ## Results
-- **My recommendation:**
+- **My recommendation:** Do not fund the $2M campaign: even at a 20% switch rate and the full raw churn gap, it loses about $1.8M in 12 months.
+  Instead, test a small, low-cost contract offer on a random sample of month-to-month customers. Measure the switch rate and churn against a control group.
 - **Full report with charts:** [runs/telco/recommendation.md](runs/telco/recommendation.md)
 - **The brief I wrote:** [briefs/2m-campaign.md](briefs/2m-campaign.md)
 - **My team rule:** see "Analysis rules" in [CLAUDE.md](CLAUDE.md)

@@ -29,6 +29,7 @@ Write in ASD-STE100 Simplified Technical English. The reader may not be a data e
 - Never invent a number, fact, or source. If the data cannot answer, write "unknown" and say what data is needed.
 - Label each number: **data** (counted directly from the file), **derived** (calculated from data numbers; show the formula), or **assumption** (not in the data; say who set it and why).
 - Opportunity sizes: show low, mid, and high, with every assumption stated.
+- When a `customerID` appears more than once, always keep one row per customer, and log which row you kept and why in `cleaning_log.md`.
 
 ## Charts
 - One insight per chart. The title states the finding. Gray out the rest. No clutter.

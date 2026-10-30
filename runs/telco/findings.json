@@ -1,0 +1,66 @@
+{
+  "recommendation": "do_not_fund",
+  "data_issues": [
+    {
+      "column": "customerID",
+      "issue": "211 customerIDs have 2 rows each with different Churn values",
+      "rows_affected": 422,
+      "action": "Main run kept the Churn = Yes row; second run kept the Churn = No row; both runs reported"
+    },
+    {
+      "column": "MonthlyCharges",
+      "issue": "200 values are 100 times too large (1,870 to 11,515)",
+      "rows_affected": 200,
+      "action": "Divided 191 by 100 where value / 100 is within 10% of TotalCharges / tenure; removed 9 rows that failed the check (user decision)"
+    },
+    {
+      "column": "TotalCharges",
+      "issue": "Blank for customers with tenure 0",
+      "rows_affected": 11,
+      "action": "Set to 0"
+    },
+    {
+      "column": "RetentionOfferAccepted",
+      "issue": "Filled only for churners (leaks the churn result)",
+      "rows_affected": 2033,
+      "action": "Column excluded from the analysis"
+    }
+  ],
+  "drivers": [
+    {
+      "variable": "Contract",
+      "direction_overall": "higher",
+      "direction_within_contract": "not_checked"
+    },
+    {
+      "variable": "tenure",
+      "direction_overall": "higher",
+      "direction_within_contract": "mixed"
+    },
+    {
+      "variable": "InternetService",
+      "direction_overall": "higher",
+      "direction_within_contract": "higher"
+    },
+    {
+      "variable": "PaymentMethod",
+      "direction_overall": "higher",
+      "direction_within_contract": "higher"
+    },
+    {
+      "variable": "PaperlessBilling",
+      "direction_overall": "higher",
+      "direction_within_contract": "higher"
+    },
+    {
+      "variable": "SeniorCitizen",
+      "direction_overall": "higher",
+      "direction_within_contract": "mixed"
+    },
+    {
+      "variable": "LoyaltyAppUser",
+      "direction_overall": "higher",
+      "direction_within_contract": "lower"
+    }
+  ]
+}
