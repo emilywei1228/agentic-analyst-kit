@@ -35,6 +35,36 @@ Copy-paste prompts for every step: **[PROMPTS.md](PROMPTS.md)**. Use **claude.ai
 - **My team rule:** see "Analysis rules" in [CLAUDE.md](CLAUDE.md)
 - **The reviewer agent:** [.claude/agents/reviewer.md](.claude/agents/reviewer.md) and its review: [runs/telco/review.md](runs/telco/review.md)
 
+### For the marketing team: the $2M campaign in 3 charts
+
+| Key number | Value |
+| --- | --- |
+| Month-to-month customers | 3,870 |
+| Their monthly revenue | $257,150 ($66.45 average) |
+| Churn: month-to-month vs 1-year | 44.3% vs 14.6% |
+| Gap after controls for tenure, internet type, and payment method | 13.3 points |
+| Net value in 12 months (low / mid / high) | -$1.99M / -$1.96M / -$1.82M |
+
+**1. Month-to-month customers churn much more.**
+
+![Month-to-month customers churn 29.8 points more than 1-year customers](runs/telco/chart1_churn_by_contract.png)
+
+Month-to-month customers churn at 44.3%. 1-year customers churn at 14.6%.
+
+**2. The gap is not only a tenure effect.**
+
+![The contract gap remains in every tenure band](runs/telco/chart2_gap_by_tenure_band.png)
+
+Month-to-month customers churn more in every tenure band. The gap is largest for new customers.
+
+**3. But the campaign does not pay back.**
+
+![Net value is below $0 in all three cases](runs/telco/chart3_net_value.png)
+
+In all three cases, the revenue saved is far below the $2M cost. The gap is associated with contract type. The data does not show that a contract change causes lower churn.
+
+Source: [runs/telco/recommendation.md](runs/telco/recommendation.md). Every number comes from `runs/telco/analysis.py`.
+
 ## Data
 **Source:** IBM Telco Customer Churn sample dataset (IBM Sample Data Sets), a fictional phone and internet company with 7,043 customers. Public copy: [kaggle.com/datasets/blastchar/telco-customer-churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn).
 
